@@ -62,12 +62,14 @@ Please note that deprecation notices will be added to this pathway from Moodle 4
 
 namespace local_groupmanager\external;
 
-use external_function_parameters;
-use external_multiple_structure;
-use external_single_structure;
-use external_value;
+use core_external\external_api;
+use core_external\external_function_parameters;
+use core_external\external_multiple_structure;
+use core_external\external_single_structure;
+use core_external\external_value;
 
-class create_groups extends \core_external\external_api {
+
+class create_groups extends external_api {
     public static function execute_parameters(): external_function_parameters {
         return new external_function_parameters([
             'groups' => new external_multiple_structure(
